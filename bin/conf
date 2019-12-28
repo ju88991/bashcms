@@ -1,5 +1,5 @@
 contents="bashcms_contents"
-contents_owner="masumi"
+contents_owner="ju88991"
 wwwdir="/var/www/html"
 
 contentsdir="$wwwdir/$contents"
