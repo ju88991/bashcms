@@ -2,6 +2,7 @@ contents="bashcms_contents"
 contents_owner="ju88991"
 wwwdir="/var/www/html"
 
+logdir="/var/log/$contents"
 contentsdir="$wwwdir/$contents"
 appdir="$wwwdir/bashcms"
 viewdir="$appdir/view"
