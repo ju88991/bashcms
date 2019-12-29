@@ -6,4 +6,4 @@ echo -e 'Content-type: text/html\n\n'
 
 cd "$contentsdir"
 
-git pull
+git pull origin master

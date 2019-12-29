@@ -4,3 +4,4 @@ wwwdir="/var/www/html"
 
 contentsdir="$wwwdir/$contents"
 appdir="$wwwdir/bashcms"
+viewdir="$appdir/view"
