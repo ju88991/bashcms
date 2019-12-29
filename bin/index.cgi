@@ -4,4 +4,4 @@ exec 2> "$logdir/$(basename $0).$(date +%Y%m%d_%H%M%S).$$"
 
 md="$contentsdir/posts/template/main.md"
 echo -e "Content-Type: text/html\n"
-pandoc -f markdown_github+yaml_metadata_block "$md"
+pandoc --template="$viewdir/template.html" -f markdown_github+yaml_metadata_block "$md"
