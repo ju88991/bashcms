@@ -3,8 +3,8 @@ source "$(dirname $0)/bin/conf"
 
 [ "$USER" = "root" ]
 
-mkdir -p "$logdir"
-chown www-data:www-data "$logdir"
+mkdir -p "$logdir" "$datadir"
+chown www-data:www-data "$logdir" "$datadir"
 
 rsync -av --delete "$(dirname $0)/bin/" "$appdir/"
 chown www-data:www-data "$appdir" -R
