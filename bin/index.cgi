@@ -4,9 +4,9 @@ exec 2> "$logdir/$(basename $0).$(date +%Y%m%d_%H%M%S).$$"
 
 dir="$(tr -dc 'a-zA-Z0-9_=' <<< ${QUERY_STRING} | sed 's;=;s/;')"
 
-md="$contentsdir/posts/template/main.md"
+md="$contentsdir/posts/$dir/main.md"
 [ -f "$md" ]
 
 pandoc --template="$viewdir/template.html" -f markdown_github+yaml_metadata_block "$md"
-#sed -r "/:\/\/|="\//!s;<(img src|a href)=\";&dir/;"
-#sed "s;/$dir/#;#;g"
+sed -r "/:\/\/|="\//!s;<(img src|a href)=\";&dir/;"
+sed "s;/$dir/#;#;g"
